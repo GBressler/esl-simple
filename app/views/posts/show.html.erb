@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+<div>
+  <iframe src="https://appear.in/livelearning" width="800" height="640" frameborder="0"></iframe>
+</div>
+<p>
+  <strong>User:</strong>
+  <%= @post.user.username %>
+</p>
+<p>Written by <%= current_user && current_user.id == @post.user_id ? "You" : @post.user.email %>, <%= time_ago_in_words @post.created_at %> ago</p>
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>Restricted:</strong>
+  <%= @post.restricted %>
+</p>
+
+
+
+<h2> <%= comment_count = pluralize(@post.comments.count, "Comment") %></h2>
+	
+  <h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.user.username %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+
+
+
+  <div class="field">
+    <%= f.label "Reply" %><br>
+    <%= f.text_area :body %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+	
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

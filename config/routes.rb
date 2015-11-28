@@ -1,0 +1,133 @@
+Rails.application.routes.draw do
+
+devise_for :users
+#the best so far:
+#authenticated :user do
+#root :to => 'users#show', as: :authenticated_root
+#end
+
+resources :users
+#get 'index' => 'users#index'
+get 'users'  => 'users#index'
+get 'users/edit'
+get 'show' =>'users/show'
+controller :static_pages do
+    get :home
+  #get 'show' =>'users/show'
+end
+
+  #get 'user_profile_page/index'
+  #get 'user_profile_page/show' 
+  #get 'users'  => 'users#index'
+
+  resources :posts do 
+    resources :comments
+  end
+ scope '(:locale)', locale: /es/ do
+    resources :static_pages
+    #resources :about_class
+    #resources :policies
+ end
+  
+  #destroy_user_session DELETE /users/sign_out
+  #devise_for :users
+
+  
+  #devise_for :users do 
+   #get '/users/sign_out' => 'devise/sessions#destroy', :as => :destroy_user_session
+   #get 'users/:id' => 'users#show'
+#end
+  
+  #delete "/logout" => "devise/sessions#destroy", :as => :destroy_user_session
+  #root :to => 'static_pages#home'
+
+  #devise_scope :user do
+    #get 'login', to: "devise/sessions#new", as: "login"
+    #get 'logout', to: "devise/sessions#destroy", as: "logout"
+    #get 'logout', to: "users/sessions#destroy", as: "logout"
+    #get 'signup', to: "users#new", as: "signup"
+    #match '/users/:id', :to => 'users#show', :as => :user
+    #devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy'
+  #end
+  #end
+ 
+  authenticated :user do
+    'users/:id'
+  end
+      #root :to => 'posts#index', as: :authenticated_root
+
+   #authenticated :user do
+    # root :to => 'posts#index', as: :authenticated_root
+   #end
+    #root :to => "posts#index"
+  #post 'contact', to:'contact#process_form'
+    #root to: 'static_pages#home'
+  #end
+
+
+    resources :contacts, only: [:new, :create] do
+      root :to => 'static_pages#home'
+    end
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+
+  # You can have the root of your site routed with "root"
+   root 'static_pages#home'
+   
+  controller :static_pages do
+    get :home
+    get 'about' =>'static_pages#about'
+    get 'about_class' => 'static_pages#about_class'
+    get 'policies' =>'static_pages#policies'
+    get 'schedule_class' =>'static_pages#schedule_class'
+
+  end
+  # Example of regular route:
+  #   get 'products/:id' => 'catalog#view'
+
+  # Example of named route that can be invoked with purchase_url(id: product.id)
+  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
+  # Example resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Example resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
+  # Example resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
+  # Example resource route with more complex sub-resources:
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', on: :collection
+  #     end
+  #   end
+
+  # Example resource route with concerns:
+  #   concern :toggleable do
+  #     post 'toggle'
+  #   end
+  #   resources :posts, concerns: :toggleable
+  #   resources :photos, concerns: :toggleable
+
+  # Example resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
+end

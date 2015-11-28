@@ -1,0 +1,106 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  activerecord:
+    attributes:
+      article:
+        title: "Title"
+        body: "Body"
+  greet: "If you would like to learn American English through the services of a teacher who is a native speaker, just "
+  registrarte_aquí:  "register here"
+  greet2: "and take a moment to get to know"
+  nuestro_método:  "our method"
+  greet3: "and "
+  política_de_enseñanza:  "our policies,"
+  greet4: "you will dominate the universal language that will open many doors in regards to your personal and professional development."
+  about:
+  about_html: <p>After graduating with a Bachelor of Arts in Spanish with a concentration in International Business as well as a certificate to Teach English as a Foreign Language (TEFL), I moved to Mexico to put what I had learned into practice.  While living in Mexico I met a large variety of students, worked in various institutes and in a multi-national company.  In July of 2013, I moved again, this time to Lima. Since I arrived I've discovered that Peru is a very diverse country with lots interesting, friendly people...and incredibly delicious food!  During my time here I've had opportunities to teach in various institutes, give private classes as well as teach in the Superintendencia de Banca y Seguros (SBS). <br> <br> You can find out more about me here <script src="//platform.linkedin.com/in.js" type="text/javascript"></script> <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/gregbressler/es" data-format="hover" data-related="false" data-text="Greg Bressler"></script></p>
+  class_info_html:  <p class="well well-sm">"Our classes use the American English File series.  This text is very balanced and focuses on all of the crucial areas of the language speaking writing reading and listening.  The material is full of activities as well as quizzes and exams to show how the student is progressing.  The American English File series coincides with the Common European Framework of Reference for Languages and covers levels A1 to B2 (Basic to High Intermediate)."</p>
+  policies:
+  intro_html:  <p class="well well-lg">Please take a moment to familiarize yourself with our policies.</p>
+  rules_html:  <li>The classes will be given in Magdalena del Mar.</li><br><li>Classes in the students house or place of employment will incur an additional cost which will corresponde to the cost of transportation.</li><br><li>The cost of materials will not be included with the class.  The teacher and the student will select the material according to the options that the teacher presents. After choosing the material, the student will be provided with a black and white or color copy (which will be paid for by the student ) as well as a digital copy if possible.  If the student wishes to use their own materials, they will provide the teacher with a copy.</li><br><li>Tuition for the classes will be paid during the first week of each month.</li><br><li>In order to optimize the student's learning, class size will be limited to 6 students.</li><br><li>If the student needs to cancel the class, they must do so at least 3 hours in advance. The clase can be made up within 30 days, when complying with a cancellation of at least 3 hours before the start of the class, otherwise the class will be lost.</li><br><li>There will be no refunds of any payment or incurred cost.</li>
+  forms:
+    messages:
+      success: "Operation succeeded!"
+    buttons:
+      edit: "Edit"
+      submit: "Submit"
+  contact:
+    first_name:
+    last_name:
+    email_address:
+    message_content:
+      success: "Operation succeeded!"
+    buttons:
+      submit: "Submit"
+  menu:
+    sign_in: "Sign In"
+    new_post: "Create a Post"
+    sign_out: "Sign Out"
+    contact:
+    about_me:
+    class_times:
+    policies:
+    resources:
+  home:
+  about_me:
+  posts:
+    index:
+      header: "Posts"
+      title: "title"
+      user:  "User"
+      title_of_post:  "Title"
+      content: ""
+      show:  "read"
+      edit:
+      destroy:
+    show:
+      user:
+      title:
+      content:
+      Comments:
+      comments:
+      commenter:
+      reply:
+      buttons:
+        create_comment:
+      edit:
+      back:
+    edit:
+      title: "Editing Post"
+      user:
+      title:
+      content:
+      restricted:
+      update_post:
+      show:
+      back:
+    new:
+      title: "New Post"
+      user:
+      title:
+      content:
+      restricted:
+      buttons:
+        create_post:
+      show:
+      back:

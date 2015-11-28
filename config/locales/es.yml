@@ -1,0 +1,64 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  activerecord:
+    attributes:
+      article:
+        title: "Titulo"
+        body: "Contenido"
+  navbar:
+  About_Me: "Acerca de mi"
+  About_Our_Classes: "Acerca de Nuestras Clases"
+  Policies: "Politica"
+  Contact: "Contacto"
+  greet: "%{message}"
+  greet2: "%{message}"
+  greet3: "%{message}"
+  greet4: "%{message}"
+  about:
+  about_html:  <p>Después de graduarme con un título de español y una especialización en negocios internacionales además de un certificado de enseñar inglés, me mudé a México para poner en práctica lo que había aprendido . Mientras estaba viviendo en México, tuve muchas oportunidades de encontrar una gran varidad de estudiantes, trabajar en varios institutos y una empresa internacional. En julio del 2013, me mudé otra vez, esta vez a Lima. Desde mi llegada he encontrado un país muy diverso con mucha gente interesante...y super rica comida. Durante mi tiempo acá, he tenido la oportunidad de enseñar en varios institutos de idiomas, dar clases particulares, además de clases en la Superintendencia de Banca y Seguros (SBS).<br> <br> Puedes encontrar más a cerca de mi aqui <script src="//platform.linkedin.com/in.js" type="text/javascript"></script> <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/gregbressler/es" data-format="hover" data-related="false" data-text="Greg Bressler"></script></p>
+  about_classes:
+  class_info_html:  <p class="well well-sm">El texto usado en las clases es de la serie de American English File.  Este texto es bien equilibrado y trabaja en todas las áreas cruciales del idioma...hablar, escribir y escuchar.  El material está lleno de actividades del uso del idioma, además que contempla pruebas y exámenes para mostrar como el/la estudiante esta progresando. La serie de American English File coincide con <a href="https://es.wikipedia.org/wiki/Marco_Com%C3%BAn_Europeo_de_Referencia_para_las_lenguas">el Marco Común de Europeo de Referencia</a> y sirve para los niveles de A1 hasta B2 ( desde Básico hasta Intermedio alto ).</p> 
+  policies:
+  intro_html:  <p class="well well-lg">Por favor tome un momento para familiarizarse con las politicas de enseñanza.</p>
+  rules_html:  <li>Las clases de inglés se dictan en el distrito de Magdalena del Mar.</li><br><li>Las clases en su domicilio o empresa cuentan con un adicional pago que corresponde al costo de transporte.</li><br><li>El costo de materiales no está incluido en las clases.  El maestro y el/la estudiante elegirán el material según las opciones que presente el maestro. Luego de haber elegido el material, se le proveerá al estudiante una copia en blanco y negro o de color (cuyos costos serán financiados por el estudiante) además de una copia digital.  Si el/la estudiante desea usar su propias materiales, se brindará una copia al maestro.</li><br><li>Las clases serán pagadas en la primera semana de cada mes.</li><br><li>Para optimizar la experiencia para los estudiantes, se limitará el numero de estudiantes en cada clase a 6 estudiantes. </li><br><li>Si el/la estudiante desea cancelar una clase, ésta debe hacerse con una mínima anticipación de 3 horas. Esta clase puede ser recuperada dentro de los 30 días calendario, siempre y cuando se cumpla con el aviso de 3 horas previas a su cancelación, en caso contrario, la clase se dará por perdida.</li><br><li>No habrá devoluciones de ningún costo u pago.</li>
+  contacts:
+    simple_form:
+      labels:
+        contacts:
+          first_name: "Primer Nombre"
+          last_name: "Apellido"
+          email: "Email"
+          content: "Contenido"
+      buttons:
+        submit: "Submit"
+  navbar:
+    about_me: "Acerca de mi"
+    About_Our_Classes: "Acerca de Nuestras Clases"
+    Policies: "Politica"
+    Contact: "Contacto"
+  views:
+    static_pages:
+      home:
+        greeting:  "Si quieres aprender inglés americano a través de los servicios de un maestro nativo hablante con sólo registrarte aquí y conocer sobre nuestro método y política de enseñanza podrás dominar el idioma universal que abrirá muchas puertas para tu desarrollo profesional y personal."
+      about_classes:
+        class_info_html:  <p>"Our classes use the American English File series.  This text is very balanced and focuses on all of the crucial areas of the language speaking writing reading and listening.  The material is full of activities as well as quizzes and exams to show how the student is progressing.  The American English File series coincides with the Common European Framework of Reference for Languages and covers levels A1 to B2 (Basic to High Intermediate)."</p>

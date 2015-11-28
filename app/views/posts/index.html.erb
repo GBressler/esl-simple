@@ -1,0 +1,44 @@
+<% if user_signed_in? %>
+<%= link_to t('menu.sign_out'), destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to 'Sign In', new_user_session_path %>
+<% end %>
+
+<p id="notice">
+  <%= notice %>
+</p>
+
+<!-->See Readme line 356 from 8/29/2015<-->
+
+<h1><%= t('.title')%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('.user')%></th>
+      <th><%= t('.title_of_post')%></th>
+      <th>Content</th>
+      <th hidden>Restricted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.user.username %>
+        </td>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td ><%= post.restricted %></td>
+        <td><%= link_to t('.show'), post %></td>
+        <td><%= link_to t('.edit'), edit_post_path(post) if can?(:edit, post) %></td>
+        <td><%= link_to t('.destroy'), post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('menu.new_post'), new_post_path %>
